@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Animated_Movies">
+          <Key>
+            <PropertyRef Name="Animated Movie ID" />
+          </Key>
+          <Property Name="Animated Movie ID" Type="float" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Genre" Type="nvarchar" MaxLength="255" />
+          <Property Name="Recommend" Type="nvarchar" MaxLength="255" />
+          <Property Name="Year" Type="float" />
+          <Property Name="Download" Type="nvarchar" MaxLength="255" />
+          <Property Name="Need to watch" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Anime _and_Cartoons">
+          <Key>
+            <PropertyRef Name="Completed Anime &amp; Cartoon ID" />
+          </Key>
+          <Property Name="Completed Anime &amp; Cartoon ID" Type="float" Nullable="false" />
+          <Property Name="Completed Anime/Cartoons" Type="nvarchar" MaxLength="255" />
+          <Property Name="Recommended" Type="nvarchar" MaxLength="255" />
+          <Property Name="F4" Type="nvarchar" MaxLength="255" />
+          <Property Name="F5" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Completed Manga_and_Manwah">
+          <Key>
+            <PropertyRef Name="Completed Manga &amp; Manwah ID" />
+          </Key>
+          <Property Name="Completed Manga &amp; Manwah ID" Type="float" Nullable="false" />
+          <Property Name="Completed Manga" Type="nvarchar" MaxLength="255" />
+          <Property Name="Recommend" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Current Anime_and_Cartoons">
+          <Key>
+            <PropertyRef Name="Current Anime &amp; Cartoon ID" />
+          </Key>
+          <Property Name="Current Anime &amp; Cartoon ID" Type="float" Nullable="false" />
+          <Property Name="Current Anime/Cartoons" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Live_Action_Movies">
+          <Key>
+            <PropertyRef Name="Live Action Movie ID" />
+          </Key>
+          <Property Name="Live Action Movie ID" Type="float" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Genre" Type="nvarchar" MaxLength="255" />
+          <Property Name="Recommend" Type="nvarchar" MaxLength="255" />
+          <Property Name="Year" Type="nvarchar" MaxLength="255" />
+          <Property Name="Download" Type="nvarchar" MaxLength="255" />
+          <Property Name="Need to watch" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Live_Action_TV_Shows">
+          <Key>
+            <PropertyRef Name="TV Show ID" />
+          </Key>
+          <Property Name="TV Show ID" Type="float" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Genre" Type="nvarchar" MaxLength="255" />
+          <Property Name="Recommend" Type="nvarchar" MaxLength="255" />
+          <Property Name="Year" Type="nvarchar" MaxLength="255" />
+          <Property Name="Download" Type="nvarchar" MaxLength="255" />
+          <Property Name="Need to watch" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Manga_and_Manwah">
+          <Key>
+            <PropertyRef Name="Manga &amp; Manwah ID" />
+          </Key>
+          <Property Name="Manga &amp; Manwah ID" Type="float" Nullable="false" />
+          <Property Name="Current Manga" Type="nvarchar" MaxLength="255" />
+          <Property Name="Last Chapter Read" Type="float" />
+        </EntityType>
+        <EntityType Name="Video_Game">
+          <Key>
+            <PropertyRef Name="Video Game ID" />
+          </Key>
+          <Property Name="Video Game ID" Type="float" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Platform" Type="nvarchar" MaxLength="255" />
+          <Property Name="Recommendation" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityContainer Name="DBModelStoreContainer">
+          <EntitySet Name="Animated_Movies" EntityType="Self.Animated_Movies" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Anime _and_Cartoons" EntityType="Self.Anime _and_Cartoons" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Completed Manga_and_Manwah" EntityType="Self.Completed Manga_and_Manwah" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Current Anime_and_Cartoons" EntityType="Self.Current Anime_and_Cartoons" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Live_Action_Movies" EntityType="Self.Live_Action_Movies" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Live_Action_TV_Shows" EntityType="Self.Live_Action_TV_Shows" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Manga_and_Manwah" EntityType="Self.Manga_and_Manwah" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Video_Game" EntityType="Self.Video_Game" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Animated_Movies">
+          <Key>
+            <PropertyRef Name="Animated_Movie_ID" />
+          </Key>
+          <Property Name="Animated_Movie_ID" Type="Double" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Genre" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Recommend" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Year" Type="Double" />
+          <Property Name="Download" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Need_to_watch" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Anime__and_Cartoons">
+          <Key>
+            <PropertyRef Name="Completed_Anime___Cartoon_ID" />
+          </Key>
+          <Property Name="Completed_Anime___Cartoon_ID" Type="Double" Nullable="false" />
+          <Property Name="Completed_Anime_Cartoons" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Recommended" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Completed_Manga_and_Manwah">
+          <Key>
+            <PropertyRef Name="Completed_Manga___Manwah_ID" />
+          </Key>
+          <Property Name="Completed_Manga___Manwah_ID" Type="Double" Nullable="false" />
+          <Property Name="Completed_Manga" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Recommend" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Current_Anime_and_Cartoons">
+          <Key>
+            <PropertyRef Name="Current_Anime___Cartoon_ID" />
+          </Key>
+          <Property Name="Current_Anime___Cartoon_ID" Type="Double" Nullable="false" />
+          <Property Name="Current_Anime_Cartoons" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Live_Action_Movies">
+          <Key>
+            <PropertyRef Name="Live_Action_Movie_ID" />
+          </Key>
+          <Property Name="Live_Action_Movie_ID" Type="Double" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Genre" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Recommend" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Year" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Download" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Need_to_watch" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Live_Action_TV_Shows">
+          <Key>
+            <PropertyRef Name="TV_Show_ID" />
+          </Key>
+          <Property Name="TV_Show_ID" Type="Double" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Genre" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Recommend" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Year" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Download" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Need_to_watch" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Manga_and_Manwah">
+          <Key>
+            <PropertyRef Name="Manga___Manwah_ID" />
+          </Key>
+          <Property Name="Manga___Manwah_ID" Type="Double" Nullable="false" />
+          <Property Name="Current_Manga" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Last_Chapter_Read" Type="Double" />
+        </EntityType>
+        <EntityType Name="Video_Game">
+          <Key>
+            <PropertyRef Name="Video_Game_ID" />
+          </Key>
+          <Property Name="Video_Game_ID" Type="Double" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Platform" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Recommendation" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="DBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Animated_Movies" EntityType="Self.Animated_Movies" />
+          <EntitySet Name="Anime__and_Cartoons" EntityType="Self.Anime__and_Cartoons" />
+          <EntitySet Name="Completed_Manga_and_Manwah" EntityType="Self.Completed_Manga_and_Manwah" />
+          <EntitySet Name="Current_Anime_and_Cartoons" EntityType="Self.Current_Anime_and_Cartoons" />
+          <EntitySet Name="Live_Action_Movies" EntityType="Self.Live_Action_Movies" />
+          <EntitySet Name="Live_Action_TV_Shows" EntityType="Self.Live_Action_TV_Shows" />
+          <EntitySet Name="Manga_and_Manwah" EntityType="Self.Manga_and_Manwah" />
+          <EntitySet Name="Video_Game" EntityType="Self.Video_Game" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DBModelStoreContainer" CdmEntityContainer="DBEntities">
+          <EntitySetMapping Name="Animated_Movies">
+            <EntityTypeMapping TypeName="DBModel.Animated_Movies">
+              <MappingFragment StoreEntitySet="Animated_Movies">
+                <ScalarProperty Name="Animated_Movie_ID" ColumnName="Animated Movie ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Genre" ColumnName="Genre" />
+                <ScalarProperty Name="Recommend" ColumnName="Recommend" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="Download" ColumnName="Download" />
+                <ScalarProperty Name="Need_to_watch" ColumnName="Need to watch" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Anime__and_Cartoons">
+            <EntityTypeMapping TypeName="DBModel.Anime__and_Cartoons">
+              <MappingFragment StoreEntitySet="Anime _and_Cartoons">
+                <ScalarProperty Name="Completed_Anime___Cartoon_ID" ColumnName="Completed Anime &amp; Cartoon ID" />
+                <ScalarProperty Name="Completed_Anime_Cartoons" ColumnName="Completed Anime/Cartoons" />
+                <ScalarProperty Name="Recommended" ColumnName="Recommended" />
+                <ScalarProperty Name="F4" ColumnName="F4" />
+                <ScalarProperty Name="F5" ColumnName="F5" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Completed_Manga_and_Manwah">
+            <EntityTypeMapping TypeName="DBModel.Completed_Manga_and_Manwah">
+              <MappingFragment StoreEntitySet="Completed Manga_and_Manwah">
+                <ScalarProperty Name="Completed_Manga___Manwah_ID" ColumnName="Completed Manga &amp; Manwah ID" />
+                <ScalarProperty Name="Completed_Manga" ColumnName="Completed Manga" />
+                <ScalarProperty Name="Recommend" ColumnName="Recommend" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Current_Anime_and_Cartoons">
+            <EntityTypeMapping TypeName="DBModel.Current_Anime_and_Cartoons">
+              <MappingFragment StoreEntitySet="Current Anime_and_Cartoons">
+                <ScalarProperty Name="Current_Anime___Cartoon_ID" ColumnName="Current Anime &amp; Cartoon ID" />
+                <ScalarProperty Name="Current_Anime_Cartoons" ColumnName="Current Anime/Cartoons" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Live_Action_Movies">
+            <EntityTypeMapping TypeName="DBModel.Live_Action_Movies">
+              <MappingFragment StoreEntitySet="Live_Action_Movies">
+                <ScalarProperty Name="Live_Action_Movie_ID" ColumnName="Live Action Movie ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Genre" ColumnName="Genre" />
+                <ScalarProperty Name="Recommend" ColumnName="Recommend" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="Download" ColumnName="Download" />
+                <ScalarProperty Name="Need_to_watch" ColumnName="Need to watch" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Live_Action_TV_Shows">
+            <EntityTypeMapping TypeName="DBModel.Live_Action_TV_Shows">
+              <MappingFragment StoreEntitySet="Live_Action_TV_Shows">
+                <ScalarProperty Name="TV_Show_ID" ColumnName="TV Show ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Genre" ColumnName="Genre" />
+                <ScalarProperty Name="Recommend" ColumnName="Recommend" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="Download" ColumnName="Download" />
+                <ScalarProperty Name="Need_to_watch" ColumnName="Need to watch" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Manga_and_Manwah">
+            <EntityTypeMapping TypeName="DBModel.Manga_and_Manwah">
+              <MappingFragment StoreEntitySet="Manga_and_Manwah">
+                <ScalarProperty Name="Manga___Manwah_ID" ColumnName="Manga &amp; Manwah ID" />
+                <ScalarProperty Name="Current_Manga" ColumnName="Current Manga" />
+                <ScalarProperty Name="Last_Chapter_Read" ColumnName="Last Chapter Read" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Video_Game">
+            <EntityTypeMapping TypeName="DBModel.Video_Game">
+              <MappingFragment StoreEntitySet="Video_Game">
+                <ScalarProperty Name="Video_Game_ID" ColumnName="Video Game ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Platform" ColumnName="Platform" />
+                <ScalarProperty Name="Recommendation" ColumnName="Recommendation" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

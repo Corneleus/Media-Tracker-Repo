@@ -59,6 +59,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -154,13 +156,54 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\LiveActionMoviesController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LiveActionMovies.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Animated_Movies.cs">
+      <DependentUpon>MediaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Anime__and_Cartoons.cs">
+      <DependentUpon>MediaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Completed_Manga_and_Manwah.cs">
+      <DependentUpon>MediaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Current_Anime_and_Cartoons.cs">
+      <DependentUpon>MediaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Live_Action_Movies.cs">
+      <DependentUpon>MediaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Live_Action_TV_Shows.cs">
+      <DependentUpon>MediaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Manga_and_Manwah.cs">
+      <DependentUpon>MediaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MediaModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MediaModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MediaModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MediaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MediaModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MediaModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Video_Game.cs">
+      <DependentUpon>MediaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -171,6 +214,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\MediaModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MediaModel.edmx</DependentUpon>
+      <LastGenOutput>MediaModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\MediaModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MediaModel.edmx</DependentUpon>
+      <LastGenOutput>MediaModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
@@ -183,6 +236,13 @@
     </Content>
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\angular-route.min.js.map" />
+    <EntityDeploy Include="Models\MediaModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MediaModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\MediaModel.edmx.diagram">
+      <DependentUpon>MediaModel.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -208,11 +268,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\LiveActionMovies\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Api\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\Lamoives\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -226,6 +286,9 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
