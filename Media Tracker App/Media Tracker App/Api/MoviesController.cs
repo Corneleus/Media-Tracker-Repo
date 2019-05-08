@@ -8,20 +8,20 @@ using Media_Tracker_App.Models;
 
 namespace Media_Tracker_App.Api
 {
-    public class LiveActionMoviesController : ApiController
-    {//path is /api/liveactionmovies/getmovies
-        DBEntities _ctx = null; 
+    public class MoviesController : ApiController
+    {//path is /api/movies/getmovies
+       Media_ListsEntities _ctx = null; 
 
-        public LiveActionMoviesController()
+        public MoviesController()
         {
-            _ctx = new DBEntities();
+            _ctx = new Media_ListsEntities();
         }
-        public List<Live_Action_Movies> GetMovies()
+        public List<Movies> GetMovies()
         {
-            List<Live_Action_Movies> movies = null;
+            List<Movies> movies = null;
             try
             {
-                movies = _ctx.Live_Action_Movies.ToList();
+                movies = _ctx.Movies.ToList();
             }
             catch
             {

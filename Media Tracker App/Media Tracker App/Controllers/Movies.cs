@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace Media_Tracker_App.Controllers
 {
-    public class LiveActionMovies : Controller
+    public class Movies : Controller
     {
         // GET: Lamoives
         public ActionResult Index()

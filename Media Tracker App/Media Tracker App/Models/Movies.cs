@@ -12,14 +12,15 @@ namespace Media_Tracker_App.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Live_Action_TV_Shows
+    public partial class Movies
     {
-        public double TV_Show_ID { get; set; }
+        public Nullable<double> Live_Action_Movie_ID { get; set; }
         public string Name { get; set; }
         public string Genre { get; set; }
+        public string Medium { get; set; }
         public string Recommend { get; set; }
-        public string Year { get; set; }
-        public string Download { get; set; }
-        public string Need_to_watch { get; set; }
+        public Nullable<double> Year { get; set; }
+        public string Downloaded { get; set; }
+        public bool Seen_Cory_ { get; set; }
     }
 }
