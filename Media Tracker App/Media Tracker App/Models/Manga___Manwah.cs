@@ -12,15 +12,11 @@ namespace Media_Tracker_App.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Movies
+    public partial class Manga___Manwah
     {
-        public int Live_Action_Movie_ID { get; set; }
-        public string Name { get; set; }
-        public string Genre { get; set; }
-        public string Medium { get; set; }
-        public string Recommend { get; set; }
-        public Nullable<double> Year { get; set; }
-        public string Downloaded { get; set; }
-        public Nullable<bool> Seen_Cory_ { get; set; }
+        public int Manga___Manwah_ID { get; set; }
+        public string Current_Manga__English_Name_Origonal_Name { get; set; }
+        public Nullable<double> Last_Chapter_Read { get; set; }
+        public string Last_Updated { get; set; }
     }
 }

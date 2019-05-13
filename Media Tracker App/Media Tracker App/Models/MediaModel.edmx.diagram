@@ -4,8 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="4854fba54cce418f8d84a73648ad5e9d" Name="Diagram1">
-        <EntityTypeShape EntityType="MediaModel.Movies" Width="2.625" PointX="1.125" PointY="2.5" IsExpanded="true" />
+      <Diagram DiagramId="888852523a604300acd06b9ad54e0271" Name="Diagram1">
+        <EntityTypeShape EntityType="MediaModelNamespace.Anime___Cartoons" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MediaModelNamespace.Completed_Manga___Manwah" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MediaModelNamespace.Live_Action_TV_Shows" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MediaModelNamespace.Manga___Manwah" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MediaModelNamespace.Movies" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MediaModelNamespace.Video_Games" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

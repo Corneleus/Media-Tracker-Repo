@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Media_Tracker_App;
 using Media_Tracker_App.Controllers;
 
 namespace Media_Tracker_App.Tests.Controllers

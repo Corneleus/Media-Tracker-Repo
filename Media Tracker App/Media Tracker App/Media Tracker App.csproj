@@ -166,15 +166,27 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
+    <Compile Include="Models\Anime___Cartoons.cs">
+      <DependentUpon>MediaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Model1.cs">
+    <Compile Include="Models\Completed_Manga___Manwah.cs">
+      <DependentUpon>MediaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Live_Action_TV_Shows.cs">
+      <DependentUpon>MediaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Manga___Manwah.cs">
+      <DependentUpon>MediaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MediaModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>MediaModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MediaModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MediaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MediaModel.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -182,7 +194,10 @@
       <DependentUpon>MediaModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Movies.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>MediaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Video_Games.cs">
+      <DependentUpon>MediaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -193,15 +208,15 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\Model1.Context.tt">
+    <Content Include="Models\MediaModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>MediaModel.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <LastGenOutput>MediaModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Model1.tt">
+    <Content Include="Models\MediaModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>MediaModel.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
+      <LastGenOutput>MediaModel.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
@@ -247,11 +262,10 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\LiveActionMovies\Index.cshtml" />
+    <Content Include="Views\Movies\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Lamoives\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

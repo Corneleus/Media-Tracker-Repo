@@ -1,26 +1,26 @@
-﻿using System.Collections.Generic;
+﻿using Media_Tracker_App.Models;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
-using Media_Tracker_App.Models;
+
+
 
 namespace Media_Tracker_App.Api
 {
     public class MoviesController : ApiController
-    {//path is /api/movies/getmovies
-        Media_ListsEntities _ctx = null;
+    {
+        //path is /api/movies/getmovies
+        
+        Media_ListsEntities context = null;
 
-        public MoviesController() => _ctx = new Media_ListsEntities();
-        public List<Movies> GetMovies()
+        public MoviesController() => context = new Media_ListsEntities();
+
+        public List<Anime___Cartoons> GetMovies()
         {
-            List<Movies> movies = null;
-            try
-            {
-                movies = _ctx.Movies.ToList();
-            }
-            catch
-            {
-                movies = null;
-            }
+            List<Anime___Cartoons> movies = null;
+            
+            movies = context.Anime___Cartoons.ToList();
+          
             return movies;
         }
     }

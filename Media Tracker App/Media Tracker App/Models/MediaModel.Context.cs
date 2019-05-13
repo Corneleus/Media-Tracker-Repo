@@ -25,6 +25,11 @@ namespace Media_Tracker_App.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Anime___Cartoons> Anime___Cartoons { get; set; }
+        public virtual DbSet<Completed_Manga___Manwah> Completed_Manga___Manwah { get; set; }
+        public virtual DbSet<Live_Action_TV_Shows> Live_Action_TV_Shows { get; set; }
+        public virtual DbSet<Manga___Manwah> Manga___Manwah { get; set; }
         public virtual DbSet<Movies> Movies { get; set; }
+        public virtual DbSet<Video_Games> Video_Games { get; set; }
     }
 }
