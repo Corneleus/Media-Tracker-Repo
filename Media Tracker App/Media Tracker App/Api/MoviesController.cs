@@ -15,11 +15,11 @@ namespace Media_Tracker_App.Api
 
         public MoviesController() => context = new Media_ListsEntities();
 
-        public List<Anime___Cartoons> GetMovies()
+        public List<Movies> GetMovies()
         {
-            List<Anime___Cartoons> movies = null;
+            List<Movies> movies = null;
             
-            movies = context.Anime___Cartoons.ToList();
+            movies = context.Movies.ToList();
           
             return movies;
         }
